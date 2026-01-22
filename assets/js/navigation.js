@@ -29,4 +29,5 @@ fetch('index.html')
             });
         }
     })
+
     .catch(error => console.error('Error loading navigation:', error)); 
