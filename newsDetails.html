@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết tin tức - Braly Danang</title>
+    
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/Logo_mau.png" alt="Braly Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="news.html">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-section-small bg-primary text-white d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="hero-title mb-4">Tin tức & Sự kiện</h1>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Back Button -->
+            <div class="mb-4">
+                <a href="news.html" class="btn btn-outline-primary rounded-pill px-4">
+                    <i class="fas fa-arrow-left mr-2"></i> Quay lại Tin tức
+                </a>
+            </div>
+
+            <!-- Dynamic Content Container -->
+            <div id="article-container" style="display: none;">
+                <article class="news-card mb-5 shadow-sm rounded overflow-hidden border-0">
+                    <div class="card-body p-4 p-md-5">
+                        <div id="article-date" class="news-date text-primary font-weight-bold mb-2"></div>
+                        <h2 id="article-title" class="news-title mb-4"></h2>
+                        <div id="article-content" class="news-content text-muted mb-4"></div>
+                        <div id="article-gallery" class="row image-gallery"></div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="text-center py-5" style="display: none;">
+                <h3 class="text-muted">Không tìm thấy bài viết.</h3>
+                <a href="news.html" class="btn btn-primary mt-3">Về trang tin tức</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Footer loader
+        $(function(){
+            $("#footer-container").load("footer.html"); 
+        });
+
+        // News Data
+        const newsData = {
+            "halloween": {
+                title: "🎃 Happy Halloween 2025 cùng BRALY Đà Nẵng! 🎃",
+                date: "Tháng 10, 2025",
+                content: `
+                    <p>Halloween năm nay đã mang đến cho BRALY Đà Nẵng một mùa lễ hội đầy sắc màu và cảm xúc - lễ hội đầu tiên được tổ chức tại văn phòng, nhưng đã để lại vô vàn khoảnh khắc đáng nhớ.</p>
+                    <p>🧛 Mở đầu buổi tiệc là những màn hóa trang cực kỳ ấn tượng với các tạo hình “đu trend” hài hước, vừa vui nhộn vừa đầy sáng tạo – hoàn toàn đúng tinh thần năng động và trẻ trung của BRALY.</p>
+                    <p>🧟 Tiếp nối chương trình là phần minigame chủ đề Halloween, nơi mọi thành viên cùng nhau tham gia những trò chơi vừa vui vừa thử thách trí não. Không khí sôi động, tiếng cười vang khắp văn phòng đã giúp mọi người xích lại gần nhau hơn, thấu hiểu nhau hơn sau những giờ làm việc căng thẳng.</p>
+                    <p>🍷 Kết thúc chương trình là một bữa tiệc nhỏ ấm cúng, nơi cả team cùng thưởng thức đồ ăn, trò chuyện và chia sẻ những câu chuyện thú vị sau một tháng làm việc đầy nỗ lực. Khoảnh khắc này không chỉ là dịp để thư giãn mà còn là dấu ấn của tinh thần gắn kết, sáng tạo và sẻ chia, những giá trị mà BRALY luôn trân trọng.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_7500.jpg",
+                    "assets/images/TinTuc/IMG_7427.jpg",
+                    "assets/images/TinTuc/IMG_7195.jpg",
+                    "assets/images/TinTuc/IMG_7501.JPG",
+                    "assets/images/TinTuc/IMG_7435.jpg",
+                    "assets/images/TinTuc/IMG_7482.JPG"
+                ]
+            },
+            "womens-day": {
+                title: "HAPPY VIETNAMESE WOMEN’S DAY 20/10 🌷",
+                date: "20/10/2025",
+                content: `
+                    <p>Ngày 20/10, Braly tràn ngập sắc hồng, tiếng cười rạng rỡ và những khoảnh khắc ngọt ngào, khiến ngày 20/10 trở nên thật đáng nhớ đối với các chị em.</p>
+                    <p>Từ hôm qua, các anh em đã âm thầm chuẩn bị: quà, bóng bay, và từng tấm hình xinh đẹp của các chị em - tất cả để mang đến một buổi sáng ấm áp, tràn đầy yêu thương dành cho “một nửa xinh đẹp” của Braly.</p>
+                    <p>Buổi tiệc thêm phần sôi động với mini game vui nhộn, những lời chúc ý nghĩa và những món quà nhỏ nhưng chứa đựng tình cảm to lớn, thể hiện tinh thần gắn kết và chu đáo của toàn đội.</p>
+                    <p>Ngày 20/10 không chỉ là dịp tôn vinh phái đẹp, mà còn là cơ hội lan tỏa yêu thương, để mỗi thành viên cảm nhận rõ sự trân trọng và đồng hành trong đại gia đình Braly.</p>
+                    <p>💌 Xin gửi lời cảm ơn chân thành đến toàn thể anh em Braly - những người đã góp phần tạo nên một ngày thật đẹp và ý nghĩa.</p>
+                    <p>💐 Chúc các chị em luôn xinh đẹp, tự tin, rạng rỡ và hạnh phúc, không chỉ hôm nay mà trong từng khoảnh khắc của cuộc sống!</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/final.jpg",
+                    "assets/images/TinTuc/IMG_7262.jpg",
+                    "assets/images/TinTuc/IMG_7276.JPG",
+                    "assets/images/TinTuc/IMG_7239.JPG"
+                ]
+            },
+            "google-visit": {
+                title: "🤝 Đại diện Google ghé thăm văn phòng BRALY Đà Nẵng",
+                date: "17/07 & 16/10",
+                content: `
+                    <p>BRALY Đà Nẵng vinh dự được chào đón đại diện Google đến thăm văn phòng vào ngày 17/7 và 16/10. Đây là những cột mốc ý nghĩa, đánh dấu mối quan hệ hợp tác bền chặt và khẳng định nỗ lực không ngừng của BRALY trong lĩnh vực công nghệ.</p>
+                    <p>Buổi gặp gỡ không chỉ là dịp trao đổi về định hướng công nghệ, chiến lược phát triển mà còn là nguồn cảm hứng to lớn, tiếp thêm niềm tin và động lực cho toàn đội.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_9022.JPG",
+                    "assets/images/TinTuc/IMG_7194.jpg"
+                ]
+            },
+            "book-club": {
+                title: "📚 Khởi động Câu lạc bộ Đọc sách BRALY",
+                date: "Tháng 9, 2025",
+                content: `
+                    <p>Một trong những điểm nhấn đáng chú ý của tháng 9 tại BRALY Đà Nẵng chính là sự ra mắt của Câu lạc bộ Đọc sách. Buổi sinh hoạt đầu tiên đã tạo ra một không gian tràn đầy cảm hứng, nơi các thành viên có thể cùng nhau khám phá những cuốn sách hay và chia sẻ những suy nghĩ chân thành.</p>
+                    <p>Hoạt động này không chỉ giúp mỗi cá nhân làm giàu tri thức, mở rộng tầm nhìn, mà còn là dịp để tăng cường sự gắn kết. Việc hình thành CLB Đọc sách cũng là bước đi thiết thực trong văn hóa Learning & Development mà BRALY luôn hướng tới.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/z7076612716805_79c109a9e63824ba2231ae5c1b596240.jpg",
+                    "assets/images/TinTuc/z7076612683705_e88145a2a812e9d2df46a141ce7099e1.jpg"
+                ]
+            },
+            "okr-workshop": {
+                title: "Quarterly OKR Workshop - Grow Together",
+                date: "06/10/2025",
+                content: `
+                    <p>Vào ngày 06/10, đội ngũ Braly Đà Nẵng đã hào hứng tổ chức Quarterly OKR Workshop - một dịp quý báu để cùng nhìn lại, học hỏi và chia sẻ những trải nghiệm giá trị.</p>
+                    <p>Xin chân thành cảm ơn anh Trung - CEO Braly Đà Nẵng đã dẫn dắt buổi workshop với những chia sẻ thực tế, truyền cảm hứng về cách áp dụng OKR vào công việc hàng ngày và nhấn mạnh tầm quan trọng của việc thiết lập mục tiêu rõ ràng.</p>
+                    <p>Chương trình đã được thiết kế để:</p>
+                    <ul>
+                        <li><strong>Hiểu rõ OKR và KPI:</strong> Mọi người được tìm hiểu sâu về OKR, nhận biết sự khác biệt quan trọng với KPI và thấy rõ cách OKR giúp nâng cao hiệu quả công việc.</li>
+                        <li><strong>Áp dụng thực tế:</strong> Các đội nhóm cùng thiết lập OKR riêng, đồng thời thành lập 2 squads mới để tối ưu hiệu suất làm việc, giúp mỗi cá nhân đóng góp tốt hơn vào mục tiêu chung.</li>
+                        <li><strong>Kết nối đội ngũ:</strong> Workshop không chỉ là nơi học hỏi kiến thức mà còn tăng cường sự gắn kết, tạo cơ hội trao đổi và hướng về mục tiêu chung.</li>
+                    </ul>
+                    <p>Mọi người đều tự hào với những kết quả đạt được, nhưng cũng nhận thức rằng đây mới chỉ là bước đầu trong hành trình dài phía trước. Mỗi bước đi của đội ngũ đều quan trọng, và khi cùng đồng lòng, không thử thách nào là không thể vượt qua.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_7044.jpg",
+                    "assets/images/TinTuc/IMG_7033.jpg",
+                    "assets/images/TinTuc/IMG_7020.jpg",
+                    "assets/images/TinTuc/IMG_7016.jpg"
+                ]
+            },
+            "national-day": {
+                title: "🇻🇳 KỶ NIỆM 80 NĂM QUỐC KHÁNH (02/9/1945 - 02/9/2025)",
+                date: "02/09/2025",
+                content: `
+                    <p>Nhân dịp kỷ niệm 80 năm Ngày Quốc khánh, tại BRALY Đà Nẵng, chúng tôi cùng nhau nhìn lại những giá trị lịch sử và tinh thần yêu nước của dân tộc. Đây là thời điểm để mỗi thành viên tự hào về những thành tựu đã đạt được, đồng thời nuôi dưỡng trong mình khát vọng và nhiệt huyết.</p>
+                    <p>Trong ngày đặc biệt này, mọi khoảnh khắc tại văn phòng trở nên ý nghĩa hơn, nhắc nhở mỗi người về trách nhiệm và niềm tự hào khi được cùng nhau viết tiếp câu chuyện phát triển của BRALY.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_5888.jpg"
+                ]
+            },
+            "birthday-aug": {
+                title: "🎂 Sinh nhật thành viên tháng 8",
+                date: "Tháng 8, 2025",
+                content: `
+                    <p>Trong không khí ấm áp của văn phòng, Phương Nhi - thành viên xinh xắn của team UA Marketing đã nhận được món quà sinh nhật nhỏ của công ty cùng những lời chúc đầy yêu thương từ đồng nghiệp.</p>
+                    <p>Chúc Phương Nhi tuổi mới tràn đầy sức khỏe, niềm vui và nhiều thành công trong công việc lẫn cuộc sống!</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_5889.jpg"
+                ]
+            },
+            "gala-dinner": {
+                title: "👏 Giao lưu với team BRALY Hà Nội & Gala Dinner",
+                date: "20-22/08/2025",
+                content: `
+                    <p>Trong không khí hân hoan của những ngày cuối tháng 8, BRALY Đà Nẵng vui mừng chào đón các đồng nghiệp từ BRALY Hà Nội ghé thăm văn phòng. Chuyến gặp gỡ không chỉ mang đến niềm vui hội ngộ mà còn là cơ hội để trò chuyện, sẻ chia và thắt chặt sợi dây gắn kết giữa hai chi nhánh.</p>
+                    <p>⚽️ Trận giao lưu bóng đá giữa BRALY Đà Nẵng và BRALY Hà Nội đã mang đến bầu không khí sôi động và đầy năng lượng.</p>
+                    <p>🎤 Khép lại hành trình giao lưu, đêm Gala Dinner ấm áp và rực rỡ trở thành dấu ấn đáng nhớ nhất. Những nụ cười, cái ôm và lời chúc trong đêm tiệc không chỉ khép lại một chuyến gặp gỡ trọn vẹn, mà còn mở ra một chương mới của sự gắn kết.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_2721.jpeg",
+                    "assets/images/TinTuc/IMG_2988.jpg",
+                    "assets/images/TinTuc/IMG_2756.jpg",
+                    "assets/images/TinTuc/IMG_3076.jpg",
+                    "assets/images/TinTuc/zbim00024.jpg"
+                ]
+            },
+            "birthday-jun-jul": {
+                title: "🎂 Sinh nhật thành viên tháng 6 & tháng 7",
+                date: "Tháng 6 & 7",
+                content: `
+                    <p>BRALY Đà Nẵng đã tổ chức bữa tiệc sinh nhật ấm áp đầu tiên dành cho các thành viên có ngày sinh trong tháng 6 và tháng 7. Không gian văn phòng trở nên rộn ràng với những lời chúc chân thành và nụ cười rạng rỡ.</p>
+                    <p>Mỗi buổi sinh nhật là một lời nhắc nhở nhỏ rằng chúng ta không chỉ làm việc cùng nhau, mà còn đồng hành cùng nhau như một gia đình thật sự.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_3488.JPG"
+                ]
+            },
+            "birthday-sep": {
+                title: "🎂 Sinh nhật thành viên tháng 9",
+                date: "Tháng 9, 2025",
+                content: `
+                    <p>Tháng 9 không chỉ mang theo những cơn gió thu dịu dàng, mà còn là dịp để tôn vinh những “ngôi sao” rực rỡ của BRALY Đà Nẵng. Những lời chúc chân thành, nụ cười tươi rói và tinh thần vui vẻ của mọi người đã góp phần tạo nên một không gian ấm áp, gần gũi và đầy gắn kết.</p>
+                    <p>Chúc các bạn tuổi mới ngập tràn niềm vui, sức khỏe dồi dào, thành công rực rỡ trong công việc và hạnh phúc trọn vẹn trong từng khoảnh khắc của cuộc sống. Hãy tiếp tục tỏa sáng và lan tỏa nguồn năng lượng tích cực, cùng nhau vun đắp một môi trường làm việc đầy cảm hứng!</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/IMG_8432.JPG",
+                    "assets/images/TinTuc/IMG_6186.jpg"
+                ]
+            },
+            "opening": {
+                title: "✈️ Khai trương văn phòng BRALY Đà Nẵng",
+                date: "Tháng 06, 2025",
+                content: `
+                    <p>Ngày đầu tháng 6 mang theo không khí hân hoan, BRALY Đà Nẵng chính thức đánh dấu bước khởi đầu mới tại 71 Lý Thường Kiệt. Văn phòng tuy nhỏ nhắn nhưng chứa đựng tinh thần nhiệt huyết của 13 thành viên đầu tiên.</p>
+                    <p>Không gian văn phòng được chính tay các anh chị em tỉ mỉ sắp đặt. Buổi lễ khai trương thêm phần long trọng với sự hiện diện của người thân, bạn bè và lãnh đạo Braly Group.</p>
+                    <p>Với tinh thần “Better than yesterday”, BRALY Đà Nẵng tin rằng mỗi thành viên là một phần không thể thiếu trong hành trình phát triển phía trước.</p>
+                `,
+                images: [
+                    "assets/images/TinTuc/HCT02141.png",
+                    "assets/images/TinTuc/HCT02110.png",
+                    "assets/images/TinTuc/HCT02124.png",
+                    "assets/images/TinTuc/HCT02083.png",
+                    "assets/images/TinTuc/HCT02165.png",
+                    "assets/images/TinTuc/HCT02028.png"
+                ]
+            }
+        };
+
+        // Render Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+            const data = newsData[articleId];
+
+            if (data) {
+                document.getElementById('article-date').textContent = data.date;
+                document.getElementById('article-title').textContent = data.title;
+                document.getElementById('article-content').innerHTML = data.content;
+                
+                // Render Gallery
+                const galleryContainer = document.getElementById('article-gallery');
+                
+                // --- SPECIAL HANDLING FOR GALA DINNER ---
+                if (articleId === 'gala-dinner') {
+                    // Custom layout: 1 Vertical Left + 4 Grid Right
+                    const verticalImg = data.images.find(img => img.includes('IMG_2988.jpg'));
+                    const gridImages = data.images.filter(img => !img.includes('IMG_2988.jpg'));
+
+                    let html = `
+                        <div class="col-md-4 mb-3">
+                            <img src="${verticalImg}" class="img-fluid rounded w-100" style="object-fit: cover; height: 100%; min-height: 400px;" loading="lazy">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                    `;
+                    
+                    gridImages.forEach(img => {
+                        html += `
+                            <div class="col-md-6 mb-3">
+                                <img src="${img}" class="img-fluid rounded w-100" style="object-fit: cover; height: 200px;" loading="lazy">
+                            </div>
+                        `;
+                    });
+
+                    html += `</div></div>`;
+                    galleryContainer.innerHTML = html;
+                } 
+                // --- SPECIAL HANDLING FOR SINGLE/DUAL IMAGES (Avoid Cropping) ---
+                else if (['national-day', 'birthday-aug', 'birthday-jun-jul', 'birthday-sep'].includes(articleId)) {
+                    data.images.forEach(imgSrc => {
+                        const col = document.createElement('div');
+                        // Use full width for single, half for dual, but auto height to show full content
+                        // Birthday Sep has 2 images, others have 1
+                        if (data.images.length === 2) {
+                             col.className = 'col-md-6 mb-3';
+                        } else {
+                             col.className = 'col-md-10 mx-auto mb-3';
+                        }
+                        
+                        col.innerHTML = `<img src="${imgSrc}" class="img-fluid rounded w-100" style="height: auto; min-height: 300px;" loading="lazy">`;
+                        galleryContainer.appendChild(col);
+                    });
+                }
+                // --- STANDARD GRID FOR OTHERS ---
+                else {
+                    // Determine column size based on image count
+                    let colClass = 'col-md-6';
+                    if (data.images.length === 1) colClass = 'col-md-10 mx-auto'; // Fallback for other single images
+                    else if (data.images.length >= 3) colClass = 'col-md-4';
+                    
+                    if (articleId === 'womens-day' || articleId === 'okr-workshop') colClass = 'col-md-3';
+
+                    data.images.forEach(imgSrc => {
+                        const col = document.createElement('div');
+                        col.className = `${colClass} mb-3`;
+                        col.innerHTML = `<img src="${imgSrc}" class="img-fluid rounded w-100" style="object-fit:cover; height: 250px;" loading="lazy">`;
+                        galleryContainer.appendChild(col);
+                    });
+                }
+
+                document.getElementById('article-container').style.display = 'block';
+                document.title = data.title + " - Braly Danang";
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
