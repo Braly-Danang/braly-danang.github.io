@@ -1,148 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Braly Danang JSC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,72,400;0,72,500;0,72,600;1,72,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2430;
+    --ink-soft:#4a5568;
+    --paper:#f7f5f0;
+    --paper-raised:#ffffff;
+    --line:#e1ddd2;
+    --accent:#2b5d52;
+    --accent-soft:#e8efec;
+    --accent-bright:#3f8a76;
+  }
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
 
-  <title>Braly Danang - Digital Creative Studio</title>
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <!--
-		Elegance Template
-		https://templatemo.com/tm-528-elegance
-		-->
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
 
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  /* ---------- HEADER ---------- */
+  .masthead{
+    padding:72px 32px 56px;
+    max-width:1180px;
+    margin:0 auto;
+    border-bottom:1px solid var(--line);
+  }
+  .masthead-inner{
+    max-width:760px;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;
+    height:1px;
+    background:var(--accent);
+    display:inline-block;
+  }
+  h1.doc-title{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-size:52px;
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin:0 0 20px;
+  }
+  .doc-title em{
+    font-style:italic;
+    color:var(--accent);
+  }
+  .masthead p.lede{
+    font-size:17px;
+    line-height:1.65;
+    color:var(--ink-soft);
+    margin:0 0 28px;
+    max-width:640px;
+  }
+  .meta-row{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .meta-row strong{
+    color:var(--ink);
+    font-weight:500;
+  }
 
-  <link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
+  /* ---------- LAYOUT ---------- */
+  .layout{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:64px;
+    padding:56px 32px 120px;
+  }
 
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  /* ---------- TOC ---------- */
+  .toc{
+    position:sticky;
+    top:56px;
+    align-self:start;
+  }
+  .toc-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+  }
+  .toc ol{
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-left:1px solid var(--line);
+  }
+  .toc li{
+    margin:0;
+  }
+  .toc a{
+    display:block;
+    padding:9px 0 9px 20px;
+    margin-left:-1px;
+    border-left:2px solid transparent;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    text-decoration:none;
+    line-height:1.4;
+    transition:color .15s, border-color .15s;
+  }
+  .toc a:hover{
+    color:var(--accent);
+    border-left-color:var(--accent-bright);
+  }
+  .toc .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--accent);
+    margin-right:8px;
+  }
 
-  <link rel="stylesheet" href="css/animate.css">
+  /* ---------- CONTENT ---------- */
+  .content{
+    max-width:680px;
+  }
+  section{
+    padding:36px 0;
+    border-bottom:1px solid var(--line);
+    scroll-margin-top:32px;
+  }
+  section:first-of-type{
+    padding-top:0;
+  }
+  section:last-of-type{
+    border-bottom:none;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin:0 0 16px;
+  }
+  .section-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:3px 9px;
+    border-radius:3px;
+    flex-shrink:0;
+  }
+  h2{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-size:26px;
+    margin:0;
+    letter-spacing:-0.005em;
+  }
+  p{
+    font-size:15.5px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+  }
+  p:last-child{margin-bottom:0;}
+  strong{
+    color:var(--ink);
+    font-weight:600;
+  }
+  a{
+    color:var(--accent);
+    text-decoration-color:var(--accent-soft);
+    text-decoration-thickness:1.5px;
+  }
+  a:hover{
+    color:var(--accent-bright);
+  }
+  ul.plain{
+    margin:4px 0 16px;
+    padding-left:0;
+    list-style:none;
+  }
+  ul.plain li{
+    font-size:15.5px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    padding:8px 0 8px 22px;
+    border-bottom:1px solid var(--line);
+    position:relative;
+  }
+  ul.plain li:last-child{border-bottom:none;}
+  ul.plain li::before{
+    content:"→";
+    position:absolute;
+    left:0;
+    color:var(--accent);
+    font-size:13px;
+  }
+  .subblock{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    border-radius:4px;
+    padding:20px 22px;
+    margin:0 0 14px;
+  }
+  .subblock p{margin:0;}
+  .subblock p + p{margin-top:10px;}
 
-  <link rel="stylesheet" href="css/templatemo-style.css">
+  .contact-card{
+    background:var(--ink);
+    color:#f2f1ec;
+    border-radius:8px;
+    padding:32px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .contact-card p{
+    color:#c7c9ce;
+    margin:0;
+    font-size:15px;
+  }
+  .contact-card a.email{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:15px;
+    color:#ffffff;
+    background:var(--accent);
+    padding:10px 18px;
+    border-radius:5px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .contact-card a.email:hover{
+    background:var(--accent-bright);
+  }
 
-  <link rel="stylesheet" href="css/responsive.css">
+  footer{
+    max-width:1180px;
+    margin:0 auto;
+    padding:32px 32px 56px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
-    type="text/css">
+  @media (max-width: 860px){
+    .layout{grid-template-columns:1fr; padding:40px 20px 80px;}
+    .toc{position:static; margin-bottom:8px; border-bottom:1px solid var(--line); padding-bottom:28px;}
+    .masthead{padding:48px 20px 40px;}
+    h1.doc-title{font-size:38px;}
+    .contact-card{flex-direction:column; align-items:flex-start;}
+  }
 
-  <style>
-    ul li a {
-        font-weight: bold;
-        text-decoration: underline;
-    }
-    p a {
-        font-weight: bold;
-        text-decoration: underline;
-    }
-  </style>
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
 </head>
+<body>
 
-<body id="page-top" onload="translate('en','lng-tag')">
-
-  <div id="video">
-    <div class="preloader">
-      <div class="preloader-bounce">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <p class="eyebrow">Braly Danang JSC</p>
+      <h1 class="doc-title">Privacy <em>Policy</em></h1>
+      <p class="lede">How Braly Danang JSC collects, uses, and protects information across our Android and iOS applications.</p>
+      <div class="meta-row">
+        <span><strong>Applies to:</strong> Android &amp; iOS apps</span>
+        <span><strong>Contact:</strong> bralydn@bralyvn.com</span>
       </div>
     </div>
+  </header>
 
-    <header id="header">
-    </header>
+  <div class="layout">
 
-    <div id="fullpage" class="fullpage-default">
-      <div class="section animated-row" data-section="slide03">
-        <div class="section-inner">
-          <div class="row justify-content-center">
-            <div class="container text-left">
+    <nav class="toc">
+      <p class="toc-label">On this page</p>
+      <ol>
+        <li><a href="#intro"><span class="num">00</span>Introduction</a></li>
+        <li><a href="#collection"><span class="num">01</span>Information Collection &amp; Use</a></li>
+        <li><a href="#face"><span class="num">02</span>Face Data</a></li>
+        <li><a href="#log"><span class="num">03</span>Log Data</a></li>
+        <li><a href="#cookies"><span class="num">04</span>Cookies</a></li>
+        <li><a href="#providers"><span class="num">05</span>Service Providers</a></li>
+        <li><a href="#security"><span class="num">06</span>Security</a></li>
+        <li><a href="#links"><span class="num">07</span>Links to Other Sites</a></li>
+        <li><a href="#children"><span class="num">08</span>Children's Privacy</a></li>
+        <li><a href="#changes"><span class="num">09</span>Changes to This Policy</a></li>
+        <li><a href="#contact"><span class="num">10</span>Contact Us</a></li>
+      </ol>
+    </nav>
 
-              <h1 class="text-center my-5">Privacy Policy</h1>
-              <p>Braly Danang JSC built the android apps as [open source/free/ad-supported/commercial]. This SERVICE is provided by Braly Danang JSC at no cost and is intended for use as is.</p>
-              <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.</p>
-              <p>If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.</p>
-              <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Android Apps unless otherwise defined in this Privacy Policy.</p>
-              <h4>Information Collection and Use</h4>
-              <p>For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.</p>
-              <p>The app does use third party services that may collect information used to identify you.</p>
-              <p>Our apps use and transfer to any other app of information received from Google APIs will adhere to <a class="XqQF9c" href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-              <p>Link to privacy policy of third party service providers used by the app.</p>
-              <ul>
-                  <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-                  <li><a class="XqQF9c" href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob</a></li>
-                  <li><a class="XqQF9c" href="https://firebase.google.com/policies/analytics" target="_blank">Firebase Analytics</a></li>
-                  <li><a class="XqQF9c" href="https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2Fabout%2Fprivacy&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw2HPxrfEMtkk2Ddbmtl5CDu" target="_blank">Facebook</a></li>
-                  <li><a class="XqQF9c" href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank">Google API Services User Data Policy</a></li>
-              </ul>
-              <h4>Face Data Collection, Use, and Storage</h4>
-              <p>Some of our apps use face filter or sticker features that detect facial landmarks (such as the approximate position of your eyes, nose, mouth, and face outline) in real time while the camera is active, using on-device face detection technology provided by the mobile operating system (such as Apple's Vision/ARKit frameworks on iOS, or equivalent on-device face detection APIs on Android). This is used solely to align and render visual filters and stickers on your face in the live camera preview.</p>
-              <p><strong>Collection:</strong> These apps do not collect, capture, or extract any biometric identifier or face template that could identify you. Facial landmark positions are detected transiently, frame-by-frame, only to position visual effects.</p>
-              <p><strong>Processing location:</strong> All facial landmark detection is performed entirely on your device. No face data is transmitted to our servers or to any third party at any time.</p>
-              <p><strong>Sharing:</strong> We do not share any face data with any third party, advertiser, analytics provider, or affiliate.</p>
-              <p><strong>Storage and retention:</strong> Facial landmark data is not stored. It exists only in your device's memory while a single camera frame is being processed and is discarded immediately afterward, typically within milliseconds. We do not retain, log, or database any face data, on-device or on our servers.</p>
-              <p><strong>Deletion:</strong> Because no face data is stored anywhere, there is nothing to delete beyond the normal, immediate discarding described above.</p>
-              <p><strong>Your saved photos/videos:</strong> If you choose to save a photo or video created using a filter, the resulting image or video file (with the filter already applied) is saved only to your device's own photo library, as a direct result of your own action. This saved file is a standard photo/video and is not analyzed further, uploaded, or shared by us.</p><h4>Log Data</h4>
-              <p>I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.</p>
-              <h4>Cookies</h4>
-              <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
-              <p>This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
-              <h4>Service Providers</h4>
-              <p>I may employ third-party companies and individuals due to the following reasons:</p>
-              <ul>
-                  <li>To facilitate our Service;</li>
-                  <li>To provide the Service on our behalf;</li>
-                  <li>To perform Service-related services; or</li>
-                  <li>To assist us in analyzing how our Service is used.</li>
-              </ul>
-              <p>I want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
-              <h4>Security</h4>
-              <p>I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.</p>
-              <h4>Links to Other Sites</h4>
-              <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-              <h4>Children’s Privacy</h4>
-              <p>These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.</p>
-              <h4>Changes to This Privacy Policy</h4>
-              <p>I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
-              <h4>Contact Us</h4>
-              <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at bralydn@bralyvn.com</p>
-        
-            </div>
-          </div>
+    <main class="content">
+
+      <section id="intro">
+        <p>Braly Danang JSC built the android apps as [open source / free / ad-supported / commercial]. This service is provided by Braly Danang JSC at no cost and is intended for use as is.</p>
+        <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my service.</p>
+        <p>If you choose to use my service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the service. I will not use or share your information with anyone except as described in this Privacy Policy.</p>
+        <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at Android Apps unless otherwise defined in this Privacy Policy.</p>
+      </section>
+
+      <section id="collection">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Information Collection and Use</h2>
         </div>
-      </div>
-    </div>
+        <p>For a better experience, while using our service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.</p>
+        <p>The app does use third party services that may collect information used to identify you.</p>
+        <p>Our apps use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+        <p>Link to privacy policy of third party service providers used by the app:</p>
+        <ul class="plain">
+          <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener">Google Play Services</a></li>
+          <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener">AdMob</a></li>
+          <li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener">Firebase Analytics</a></li>
+          <li><a href="https://www.facebook.com/about/privacy" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" target="_blank" rel="noopener">Google API Services User Data Policy</a></li>
+        </ul>
+      </section>
+
+      <section id="face">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2>Face Data Collection, Use, and Storage</h2>
+        </div>
+        <p>Some of our apps use face filter or sticker features that detect facial landmarks (such as the approximate position of your eyes, nose, mouth, and face outline) in real time while the camera is active, using on-device face detection technology provided by the mobile operating system (such as Apple's Vision/ARKit frameworks on iOS, or equivalent on-device face detection APIs on Android). This is used solely to align and render visual filters and stickers on your face in the live camera preview.</p>
+
+        <div class="subblock">
+          <p><strong>Collection.</strong> These apps do not collect, capture, or extract any biometric identifier or face template that could identify you. Facial landmark positions are detected transiently, frame-by-frame, only to position visual effects.</p>
+        </div>
+        <div class="subblock">
+          <p><strong>Processing location.</strong> All facial landmark detection is performed entirely on your device. No face data is transmitted to our servers or to any third party at any time.</p>
+        </div>
+        <div class="subblock">
+          <p><strong>Sharing.</strong> We do not share any face data with any third party, advertiser, analytics provider, or affiliate.</p>
+        </div>
+        <div class="subblock">
+          <p><strong>Storage and retention.</strong> Facial landmark data is not stored. It exists only in your device's memory while a single camera frame is being processed, and is discarded immediately afterward — typically within milliseconds. We do not retain, log, or database any face data, on-device or on our servers.</p>
+        </div>
+        <div class="subblock">
+          <p><strong>Deletion.</strong> Because no face data is stored anywhere, there is nothing to delete beyond the normal, immediate discarding described above.</p>
+        </div>
+        <div class="subblock">
+          <p><strong>Your saved photos/videos.</strong> If you choose to save a photo or video created using a filter, the resulting file (with the filter already applied) is saved only to your device's own photo library, as a direct result of your own action. This saved file is a standard photo/video and is not analyzed further, uploaded, or shared by us.</p>
+        </div>
+      </section>
+
+      <section id="log">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2>Log Data</h2>
+        </div>
+        <p>I want to inform you that whenever you use my service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing my service, the time and date of your use of the service, and other statistics.</p>
+      </section>
+
+      <section id="cookies">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2>Cookies</h2>
+        </div>
+        <p>Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.</p>
+        <p>This service does not use these "cookies" explicitly. However, the app may use third party code and libraries that use "cookies" to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this service.</p>
+      </section>
+
+      <section id="providers">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <h2>Service Providers</h2>
+        </div>
+        <p>I may employ third-party companies and individuals due to the following reasons:</p>
+        <ul class="plain">
+          <li>To facilitate our service</li>
+          <li>To provide the service on our behalf</li>
+          <li>To perform service-related services</li>
+          <li>To assist us in analyzing how our service is used</li>
+        </ul>
+        <p>I want to inform users of this service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+      </section>
+
+      <section id="security">
+        <div class="section-head">
+          <span class="section-num">06</span>
+          <h2>Security</h2>
+        </div>
+        <p>I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage, is 100% secure and reliable, and I cannot guarantee its absolute security.</p>
+      </section>
+
+      <section id="links">
+        <div class="section-head">
+          <span class="section-num">07</span>
+          <h2>Links to Other Sites</h2>
+        </div>
+        <p>This service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+      </section>
+
+      <section id="children">
+        <div class="section-head">
+          <span class="section-num">08</span>
+          <h2>Children's Privacy</h2>
+        </div>
+        <p>These services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do the necessary actions.</p>
+      </section>
+
+      <section id="changes">
+        <div class="section-head">
+          <span class="section-num">09</span>
+          <h2>Changes to This Privacy Policy</h2>
+        </div>
+        <p>I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+      </section>
+
+      <section id="contact">
+        <div class="section-head">
+          <span class="section-num">10</span>
+          <h2>Contact Us</h2>
+        </div>
+        <div class="contact-card">
+          <p>Have a question or suggestion about this Privacy Policy? Reach out directly.</p>
+          <a class="email" href="mailto:bralydn@bralyvn.com">bralydn@bralyvn.com</a>
+        </div>
+      </section>
+
+    </main>
   </div>
 
-  <script src="js/jquery.js"></script>
-
-  <script src="js/bootstrap.min.js"></script>
-
-  <script src="js/fullpage.min.js"></script>
-
-  <script src="js/scrolloverflow.js"></script>
-
-  <script src="js/owl.carousel.min.js"></script>
-
-  <script src="js/jquery.inview.min.js"></script>
-
-  <script src="js/form.js"></script>
-
-  <script src="js/custom.js"></script>
-
-  <script src="js/translate.js"></script>
-
-  <script src="js/index.js"></script>
-
-  <script src="js/popper.js"></script>
+  <footer>
+    © Braly Danang JSC — Privacy Policy
+  </footer>
 
 </body>
-
 </html>
