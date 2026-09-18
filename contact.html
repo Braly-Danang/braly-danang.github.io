@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Braly Đà Nẵng — Concept</title>
+<title>Liên hệ — Braly Đà Nẵng</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -299,6 +299,40 @@
   .social-fb:hover{ border-color:var(--sand); color:var(--sand); }
   .social-fb svg{ width:16px; height:16px; }
 </style>
+<style>
+  .lang-switcher{position:relative; margin-right:6px; font-family:'Space Grotesk',sans-serif;}
+  .lang-current{
+    display:flex; align-items:center; gap:6px;
+    font-family:inherit; font-weight:700; font-size:13px;
+    border:2px solid var(--ink); border-radius:8px;
+    padding:6px 10px; background:var(--paper); color:var(--ink);
+    cursor:pointer;
+  }
+  .lang-current .flag-icon svg{display:block; border-radius:2px;}
+  .lang-caret{font-size:10px; margin-left:2px;}
+  .lang-menu{
+    list-style:none; margin:0; padding:6px; position:absolute; top:calc(100% + 8px); right:0;
+    background:var(--paper); border:2px solid var(--ink); border-radius:10px;
+    box-shadow:5px 5px 0 var(--ink);
+    min-width:190px; z-index:50;
+  }
+  .lang-menu li{
+    display:flex; align-items:center; gap:8px;
+    padding:8px 10px; border-radius:6px; cursor:pointer;
+    font-size:14px; font-weight:600; white-space:nowrap;
+  }
+  .lang-menu li .flag-icon svg{display:block; border-radius:2px;}
+  .lang-menu li:hover{background:var(--cream);}
+  .lang-menu[hidden]{display:none;}
+  .flag-icon svg{display:block; border-radius:2px;}
+</style>
+<style>
+  /* ---------- CONTACT HERO ---------- */
+  .contact-hero{ background:var(--violet); color:var(--paper); border-bottom:var(--bw) solid var(--ink); padding:64px 0 56px; }
+  .contact-hero h1{ font-size:44px; font-weight:700; max-width:760px; }
+  @media (max-width:640px){ .contact-hero h1{font-size:30px;} }
+  .contact-hero p{ margin-top:18px; font-size:17px; line-height:1.65; color:rgba(255,255,255,0.88); max-width:640px; }
+</style>
 </head>
 <body>
 
@@ -358,128 +392,19 @@
     <a href="contact.html" data-i18n="nav_contact">Liên hệ</a>
   </div>
 </header>
-
-<style>
-  .lang-switcher{position:relative; margin-right:6px; font-family:'Space Grotesk',sans-serif;}
-  .lang-current{
-    display:flex; align-items:center; gap:6px;
-    font-family:inherit; font-weight:700; font-size:13px;
-    border:2px solid var(--ink); border-radius:8px;
-    padding:6px 10px; background:var(--paper); color:var(--ink);
-    cursor:pointer;
-  }
-  .lang-current .flag-icon svg{display:block; border-radius:2px;}
-  .lang-caret{font-size:10px; margin-left:2px;}
-  .lang-menu{
-    list-style:none; margin:0; padding:6px; position:absolute; top:calc(100% + 8px); right:0;
-    background:var(--paper); border:2px solid var(--ink); border-radius:10px;
-    box-shadow:5px 5px 0 var(--ink);
-    min-width:190px; z-index:50;
-  }
-  .lang-menu li{
-    display:flex; align-items:center; gap:8px;
-    padding:8px 10px; border-radius:6px; cursor:pointer;
-    font-size:14px; font-weight:600; white-space:nowrap;
-  }
-  .lang-menu li .flag-icon svg{display:block; border-radius:2px;}
-  .lang-menu li:hover{background:var(--cream);}
-  .lang-menu[hidden]{display:none;}
-  .flag-icon svg{display:block; border-radius:2px;}
-</style>
-
 <main>
-  <!-- HERO -->
-  <div class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="pill" data-i18n="hero_pill">Braly Group · Chi nhánh Đà Nẵng</span>
-        <h1 data-i18n="hero_title">Chúng tôi phát triển ứng dụng cho hàng triệu người dùng.</h1>
-        <p class="hero-sub" data-i18n="hero_sub">Từ bàn phím, hình nền đến vẽ tay và giải trí — đội ngũ Đà Nẵng xây dựng những ứng dụng mà hàng triệu người mở ra mỗi ngày.</p>
-        <div class="hero-actions">
-          <a href="#careers" class="btn btn-fill" data-i18n="hero_cta1">Gia nhập đội ngũ</a>
-          <a href="contact.html" class="btn btn-line" data-i18n="hero_cta2">Liên hệ</a>
-        </div>
-        <div class="stat-strip">
-          <div><div class="stat-num">28+</div><div class="stat-label" data-i18n="stat_staff">Nhân viên</div></div>
-          <div><div class="stat-num">40M+</div><div class="stat-label" data-i18n="stat_users">Người dùng</div></div>
-          <div><div class="stat-num">1+</div><div class="stat-label" data-i18n="stat_years">Năm phát triển</div></div>
-        </div>
-      </div>
-      <div class="stickers">
-        <div class="sticker s1">Aa</div>
-        <div class="sticker s2" data-i18n="marquee2">HÌNH<br>NỀN</div>
-        <div class="sticker s3">✎</div>
-        <div class="sticker s4" data-i18n="marquee4">GIẢI<br>TRÍ</div>
-      </div>
+  <div class="contact-hero">
+    <div class="wrap">
+      <span class="pill" data-i18n="contact_tag">Liên hệ</span>
+      <h1 data-i18n="hero_cta2">Liên hệ</h1>
+      <p data-i18n="contact_quote">Để lại thông tin, chúng tôi sẽ liên hệ sớm nhất.</p>
     </div>
   </div>
-
-  <!-- MISSION / VISION -->
-  <section class="mv-sec">
-    <div class="wrap mv-grid">
-      <div class="mv-card box">
-        <span class="mv-tag" data-i18n="mission_tag">Sứ mệnh</span>
-        <h2 class="mv-quote" data-i18n="mission_quote">Giúp mọi việc trở nên dễ dàng hơn, qua công nghệ.</h2>
-        <p class="mv-body" data-i18n="mission_body">Chúng tôi xây dựng những ứng dụng mang lại sự thuận tiện và linh hoạt cho người dùng — từ công việc đến giải trí, từ giáo dục đến sức khỏe.</p>
-      </div>
-      <div class="mv-card box">
-        <span class="mv-tag" data-i18n="vision_tag">Tầm nhìn</span>
-        <h2 class="mv-quote" data-i18n="vision_quote">Trở thành công ty non-gaming có doanh thu số 1 Việt Nam.</h2>
-        <p class="mv-body" data-i18n="vision_body">Chúng tôi đầu tư mạnh vào nghiên cứu và phát triển, không ngừng đổi mới để tạo ra những sản phẩm người dùng cần mỗi ngày.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALUES -->
-  <section>
-    <div class="wrap">
-      <div class="values-head">
-        <h2 data-i18n="values_title">Giá trị cốt lõi định hướng cách chúng tôi làm việc</h2>
-        <p data-i18n="values_sub">Bốn nguyên tắc mà mọi quyết định ở Braly Đà Nẵng đều bám theo.</p>
-      </div>
-      <div class="value-grid">
-        <div class="value-card box v1">
-          <div><div class="value-num">01</div><div class="value-name" data-i18n="v1_name">Khát vọng vươn tầm</div></div>
-          <div class="value-desc" data-i18n="v1_desc">Đặt mục tiêu lớn, tư duy toàn cầu. Không bao giờ bằng lòng với hiện tại, luôn hướng đến vị thế dẫn đầu.</div>
-        </div>
-        <div class="value-card box v2">
-          <div><div class="value-num">02</div><div class="value-name" data-i18n="v2_name">Sáng tạo dẫn đầu</div></div>
-          <div class="value-desc" data-i18n="v2_desc">Dám nghĩ khác, dám làm khác. Coi đổi mới là lợi thế cạnh tranh cốt lõi, không đi theo mà tự tạo xu hướng.</div>
-        </div>
-        <div class="value-card box v3">
-          <div><div class="value-num">03</div><div class="value-name" data-i18n="v3_name">Tốc độ chuyên nghiệp</div></div>
-          <div class="value-desc" data-i18n="v3_desc">Hành động nhanh, quyết định nhanh — làm việc có kế hoạch, nguyên tắc rõ ràng để bàn giao sản phẩm chất lượng.</div>
-        </div>
-        <div class="value-card box v4">
-          <div><div class="value-num">04</div><div class="value-name" data-i18n="v4_name">Đồng hành cộng hưởng</div></div>
-          <div class="value-desc" data-i18n="v4_desc">Tôn trọng, gắn kết và hỗ trợ lẫn nhau trên cùng hành trình — kết nối đúng cách, sức mạnh tập thể nhân lên gấp bội.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAREERS CTA -->
-  <section class="careers-sec" id="careers">
-    <div class="wrap careers">
-      <div>
-        <h2 data-i18n="careers_title">Gia nhập đội ngũ Braly Đà Nẵng</h2>
-        <p data-i18n="careers_body">Chúng tôi luôn tìm kiếm những tài năng đam mê công nghệ, muốn tạo ra ảnh hưởng tích cực đến hàng triệu người dùng.</p>
-        <div class="tag-row">
-          <span class="tag" data-i18n="tag1">Môi trường năng động</span>
-          <span class="tag" data-i18n="tag2">Phúc lợi hấp dẫn</span>
-          <span class="tag" data-i18n="tag3">Cơ hội thăng tiến</span>
-        </div>
-      </div>
-      <a href="https://docs.google.com/document/d/19-OLqjNrx5OplCoRRAFstLCAFxuN1-nG-SqNSzo9KV8/edit?usp=sharing" target="_blank" class="btn btn-on-dark" style="justify-self:start;" data-i18n="careers_cta">Xem vị trí đang tuyển</a>
-    </div>
-  </section>
 
   <!-- CONTACT -->
   <section id="contact">
     <div class="wrap contact-grid">
       <div>
-        <span class="mv-tag" style="background:var(--violet);" data-i18n="contact_tag">Liên hệ</span>
-        <h2 class="mv-quote" style="margin:18px 0 30px;" data-i18n="contact_quote">Để lại thông tin, chúng tôi sẽ liên hệ sớm nhất.</h2>
         <div class="contact-item">
           <div class="contact-label" data-i18n="label_address">Địa chỉ</div>
           <div class="contact-value">Tầng 2, 71 Lý Thường Kiệt, Hải Châu, Đà Nẵng</div>
@@ -569,7 +494,44 @@ const BRALY_I18N = {
   label_hours:{en:"Working Hours",fr:"Horaires",de:"Öffnungszeiten",es:"Horario de atención",pt:"Horário de funcionamento",hi:"कार्य समय",vi:"Giờ làm việc",th:"เวลาทำการ",fil:"Oras ng Trabaho",id:"Jam Kerja"},
   value_hours:{en:"Mon – Fri, 8:00 AM – 5:30 PM",fr:"Lun – Ven, 8h00 – 17h30",de:"Mo – Fr, 8:00 – 17:30 Uhr",es:"Lun – Vie, 8:00 – 17:30",pt:"Seg – Sex, 8h00 – 17h30",hi:"सोम – शुक्र, सुबह 8:00 – शाम 5:30",vi:"Thứ 2 – Thứ 6, 8:00 – 17:30",th:"จันทร์ – ศุกร์ 8:00 – 17:30 น.",fil:"Lun – Biy, 8:00 AM – 5:30 PM",id:"Sen – Jum, 08:00 – 17:30"},
   map_link:{en:"Open in Google Maps →",fr:"Ouvrir dans Google Maps →",de:"In Google Maps öffnen →",es:"Abrir en Google Maps →",pt:"Abrir no Google Maps →",hi:"Google Maps में खोलें →",vi:"Mở trong Google Maps →",th:"เปิดใน Google Maps →",fil:"Buksan sa Google Maps →",id:"Buka di Google Maps →"},
-  footer_text:{en:"© 2026 Braly Da Nang. All rights reserved.",fr:"© 2026 Braly Da Nang. Tous droits réservés.",de:"© 2026 Braly Da Nang. Alle Rechte vorbehalten.",es:"© 2026 Braly Da Nang. Todos los derechos reservados.",pt:"© 2026 Braly Da Nang. Todos os direitos reservados.",hi:"© 2026 ब्राली दा नांग। सर्वाधिकार सुरक्षित।",vi:"© 2026 Braly Đà Nẵng. Đã đăng ký bản quyền.",th:"© 2026 Braly ดานัง สงวนลิขสิทธิ์",fil:"© 2026 Braly Da Nang. Lahat ng karapatan ay nakalaan.",id:"© 2026 Braly Da Nang. Hak cipta dilindungi."}
+  footer_text:{en:"© 2026 Braly Da Nang. All rights reserved.",fr:"© 2026 Braly Da Nang. Tous droits réservés.",de:"© 2026 Braly Da Nang. Alle Rechte vorbehalten.",es:"© 2026 Braly Da Nang. Todos los derechos reservados.",pt:"© 2026 Braly Da Nang. Todos os direitos reservados.",hi:"© 2026 ब्राली दा नांग। सर्वाधिकार सुरक्षित।",vi:"© 2026 Braly Đà Nẵng. Đã đăng ký bản quyền.",th:"© 2026 Braly ดานัง สงวนลิขสิทธิ์",fil:"© 2026 Braly Da Nang. Lahat ng karapatan ay nakalaan.",id:"© 2026 Braly Da Nang. Hak cipta dilindungi."},
+  about_pill:{en:"Braly Da Nang · About Us",fr:"Braly Da Nang · À propos",de:"Braly Da Nang · Über uns",es:"Braly Da Nang · Sobre nosotros",pt:"Braly Da Nang · Sobre nós",hi:"ब्राली दा नांग · हमारे बारे में",vi:"Braly Đà Nẵng · Giới thiệu",th:"Braly ดานัง · เกี่ยวกับเรา",fil:"Braly Da Nang · Tungkol sa Amin",id:"Braly Da Nang · Tentang Kami"},
+  about_h1:{en:"About Us",fr:"À propos de nous",de:"Über uns",es:"Sobre nosotros",pt:"Sobre nós",hi:"हमारे बारे में",vi:"Về chúng tôi",th:"เกี่ยวกับเรา",fil:"Tungkol sa Amin",id:"Tentang Kami"},
+  about_hero_body:{en:"Braly Da Nang is a young, dynamic tech company on a mission to build mobile apps that make life easier and more convenient for millions of people.",fr:"Braly Da Nang est une entreprise technologique jeune et dynamique, dont la mission est de créer des applications mobiles qui simplifient la vie de millions de personnes.",de:"Braly Da Nang ist ein junges, dynamisches Technologieunternehmen mit der Mission, mobile Apps zu entwickeln, die das Leben von Millionen Menschen einfacher und bequemer machen.",es:"Braly Da Nang es una empresa tecnológica joven y dinámica cuya misión es crear aplicaciones móviles que hagan la vida de millones de personas más fácil y conveniente.",pt:"A Braly Da Nang é uma empresa de tecnologia jovem e dinâmica, com a missão de criar aplicativos móveis que tornem a vida de milhões de pessoas mais fácil e conveniente.",hi:"ब्राली दा नांग एक युवा, गतिशील तकनीकी कंपनी है जिसका मिशन ऐसे मोबाइल ऐप्स बनाना है जो लाखों लोगों के जीवन को आसान और अधिक सुविधाजनक बनाएं।",vi:"Braly Đà Nẵng là một công ty công nghệ trẻ, năng động với sứ mệnh tạo ra những ứng dụng di động giúp cuộc sống của hàng triệu người trở nên dễ dàng và tiện lợi hơn.",th:"Braly ดานังเป็นบริษัทเทคโนโลยีรุ่นใหม่ที่มีความมุ่งมั่นในการสร้างแอปพลิเคชันมือถือที่ทำให้ชีวิตของผู้คนหลายล้านคนง่ายและสะดวกสบายยิ่งขึ้น",fil:"Ang Braly Da Nang ay isang batang, masiglang kumpanya ng teknolohiya na may misyon na gumawa ng mobile apps na nagpapadali at nagpapaginhawa sa buhay ng milyun-milyong tao.",id:"Braly Da Nang adalah perusahaan teknologi yang muda dan dinamis dengan misi menciptakan aplikasi mobile yang membuat kehidupan jutaan orang menjadi lebih mudah dan nyaman."},
+  about_mission_body:{en:"We are committed to bringing convenience and flexibility to individuals in every aspect of life — from work to entertainment, from education to health.",fr:"Nous nous engageons à apporter commodité et flexibilité à chacun dans tous les aspects de la vie — du travail aux loisirs, de l'éducation à la santé.",de:"Wir setzen uns dafür ein, Menschen in allen Lebensbereichen Komfort und Flexibilität zu bieten — von der Arbeit bis zur Unterhaltung, von der Bildung bis zur Gesundheit.",es:"Nos comprometemos a brindar comodidad y flexibilidad a las personas en todos los aspectos de la vida — del trabajo al entretenimiento, de la educación a la salud.",pt:"Estamos comprometidos em trazer comodidade e flexibilidade às pessoas em todos os aspectos da vida — do trabalho ao entretenimento, da educação à saúde.",hi:"हम हर व्यक्ति के जीवन के हर पहलू में सुविधा और लचीलापन लाने के लिए प्रतिबद्ध हैं — काम से लेकर मनोरंजन तक, शिक्षा से लेकर स्वास्थ्य तक।",vi:"Chúng tôi cam kết mang lại sự thuận tiện và linh hoạt cho các cá nhân trong mọi khía cạnh của cuộc sống, từ công việc đến giải trí, từ giáo dục đến sức khỏe.",th:"เรามุ่งมั่นที่จะมอบความสะดวกสบายและความยืดหยุ่นให้กับทุกคนในทุกด้านของชีวิต ตั้งแต่การทำงานไปจนถึงความบันเทิง จากการศึกษาไปจนถึงสุขภาพ",fil:"Kami ay nangako na magbigay ng kaginhawahan at flexibility sa mga indibidwal sa bawat aspeto ng buhay — mula sa trabaho hanggang sa entertainment, mula sa edukasyon hanggang kalusugan.",id:"Kami berkomitmen menghadirkan kenyamanan dan fleksibilitas bagi setiap individu dalam segala aspek kehidupan — dari pekerjaan hingga hiburan, dari pendidikan hingga kesehatan."},
+  about_vision_quote:{en:"Leading the way in smart mobile applications",fr:"Être le leader des applications mobiles intelligentes",de:"Marktführer für intelligente mobile Anwendungen",es:"Liderar las aplicaciones móviles inteligentes",pt:"Liderar as aplicações móveis inteligentes",hi:"स्मार्ट मोबाइल एप्लिकेशन में अग्रणी",vi:"Dẫn đầu về ứng dụng di động thông minh",th:"เป็นผู้นำด้านแอปพลิเคชันมือถืออัจฉริยะ",fil:"Manguna sa mga matalinong mobile application",id:"Memimpin dalam aplikasi mobile pintar"},
+  about_vision_body:{en:"To become a leading technology company in developing smart mobile applications, trusted by millions of users worldwide, sharing the common vision of Braly Group.",fr:"Devenir une entreprise technologique de premier plan dans le développement d'applications mobiles intelligentes, approuvée par des millions d'utilisateurs à travers le monde, en partageant la vision commune de Braly Group.",de:"Ein führendes Technologieunternehmen bei der Entwicklung intelligenter mobiler Anwendungen zu werden, dem Millionen von Nutzern weltweit vertrauen, im Einklang mit der gemeinsamen Vision der Braly Group.",es:"Convertirnos en una empresa tecnológica líder en el desarrollo de aplicaciones móviles inteligentes, en las que confían millones de usuarios en todo el mundo, compartiendo la visión común de Braly Group.",pt:"Tornar-se uma empresa de tecnologia líder no desenvolvimento de aplicativos móveis inteligentes, em que milhões de usuários em todo o mundo confiam, compartilhando a visão comum do Braly Group.",hi:"स्मार्ट मोबाइल एप्लिकेशन विकसित करने वाली एक अग्रणी तकनीकी कंपनी बनना, जिस पर दुनिया भर में लाखों उपयोगकर्ता भरोसा करें, और ब्राली ग्रुप के साझा विज़न के साथ आगे बढ़ना।",vi:"Trở thành công ty công nghệ hàng đầu trong việc phát triển các ứng dụng di động thông minh, được tin dùng bởi hàng triệu người dùng trên toàn thế giới, cùng hướng đến tầm nhìn chung của Braly Group.",th:"การเป็นบริษัทเทคโนโลยีชั้นนำด้านการพัฒนาแอปพลิเคชันมือถืออัจฉริยะ ที่ได้รับความไว้วางใจจากผู้ใช้หลายล้านคนทั่วโลก พร้อมมุ่งสู่วิสัยทัศน์ร่วมกันของ Braly Group",fil:"Maging nangungunang kumpanya ng teknolohiya sa pagbuo ng matatalinong mobile application, na pinagkakatiwalaan ng milyun-milyong user sa buong mundo, kasabay ng bisyon ng Braly Group.",id:"Menjadi perusahaan teknologi terkemuka dalam mengembangkan aplikasi mobile pintar yang dipercaya oleh jutaan pengguna di seluruh dunia, sejalan dengan visi bersama Braly Group."},
+  about_founders_h2:{en:"Founding Team",fr:"Équipe fondatrice",de:"Gründungsteam",es:"Equipo fundador",pt:"Equipe fundadora",hi:"संस्थापक टीम",vi:"Đội ngũ sáng lập",th:"ทีมผู้ก่อตั้ง",fil:"Founding Team",id:"Tim Pendiri"},
+  about_founders_sub:{en:"Success is the destination our founders are driving Braly Da Nang toward.",fr:"Le succès est la destination vers laquelle nos fondateurs conduisent Braly Da Nang.",de:"Erfolg ist das Ziel, auf das unsere Gründer Braly Da Nang zusteuern.",es:"El éxito es el destino hacia el que nuestros fundadores guían a Braly Da Nang.",pt:"O sucesso é o destino para o qual nossos fundadores conduzem a Braly Da Nang.",hi:"सफलता वह मंज़िल है जिसकी ओर ब्राली दा नांग के संस्थापक कंपनी को ले जा रहे हैं।",vi:"Thành công là đích đến của những nhà sáng lập Braly Đà Nẵng.",th:"ความสำเร็จคือจุดหมายที่ผู้ก่อตั้งของ Braly ดานังกำลังนำพาไปให้ถึง",fil:"Ang tagumpay ang patutunguhan ng mga founder ng Braly Da Nang.",id:"Kesuksesan adalah tujuan yang dituju para pendiri Braly Da Nang."},
+  role_ceo:{en:"Co-Founder & CEO/CPO",fr:"Cofondateur et CEO/CPO",de:"Mitgründer & CEO/CPO",es:"Cofundador y CEO/CPO",pt:"Cofundador e CEO/CPO",hi:"सह-संस्थापक और CEO/CPO",vi:"Đồng sáng lập & CEO/CPO",th:"ผู้ร่วมก่อตั้งและ CEO/CPO",fil:"Co-Founder at CEO/CPO",id:"Co-Founder & CEO/CPO"},
+  role_advisor:{en:"Co-Founder & Advisor",fr:"Cofondateur et conseiller",de:"Mitgründer & Berater",es:"Cofundador y asesor",pt:"Cofundador e conselheiro",hi:"सह-संस्थापक और सलाहकार",vi:"Đồng sáng lập & Cố vấn",th:"ผู้ร่วมก่อตั้งและที่ปรึกษา",fil:"Co-Founder at Tagapayo",id:"Co-Founder & Penasihat"},
+  founder_desc1:{en:"20+ years of experience in technology",fr:"Plus de 20 ans d'expérience dans la technologie",de:"Über 20 Jahre Erfahrung in der Technologiebranche",es:"Más de 20 años de experiencia en tecnología",pt:"Mais de 20 anos de experiência em tecnologia",hi:"प्रौद्योगिकी क्षेत्र में 20+ वर्षों का अनुभव",vi:"20+ năm kinh nghiệm trong lĩnh vực công nghệ",th:"ประสบการณ์กว่า 20 ปีในวงการเทคโนโลยี",fil:"20+ taong karanasan sa larangan ng teknolohiya",id:"20+ tahun pengalaman di bidang teknologi"},
+  founder_desc2:{en:"Startup expert & Founder of Braly Group",fr:"Expert en startups et fondateur de Braly Group",de:"Startup-Experte & Gründer der Braly Group",es:"Experto en startups y fundador de Braly Group",pt:"Especialista em startups e fundador do Braly Group",hi:"स्टार्टअप विशेषज्ञ और ब्राली ग्रुप के संस्थापक",vi:"Chuyên gia khởi nghiệp & Nhà sáng lập Braly Group",th:"ผู้เชี่ยวชาญด้านสตาร์ทอัพและผู้ก่อตั้ง Braly Group",fil:"Eksperto sa startup at Founder ng Braly Group",id:"Pakar startup & Pendiri Braly Group"},
+  about_team_h2:{en:"Our Talented Warriors",fr:"Nos talentueux guerriers",de:"Unsere talentierten Kämpfer",es:"Nuestros talentosos guerreros",pt:"Nossos talentosos guerreiros",hi:"हमारे प्रतिभाशाली योद्धा",vi:"Chiến binh tài năng",th:"นักรบผู้มีความสามารถ",fil:"Aming Mahuhusay na Mandirigma",id:"Para Pejuang Berbakat Kami"},
+  about_team_sub:{en:"The Braly Da Nang journey begins with our talented team.",fr:"L'aventure Braly Da Nang commence avec notre équipe talentueuse.",de:"Die Reise von Braly Da Nang beginnt mit unserem talentierten Team.",es:"El camino de Braly Da Nang comienza con nuestro talentoso equipo.",pt:"A jornada da Braly Da Nang começa com nossa equipe talentosa.",hi:"ब्राली दा नांग की यात्रा हमारी प्रतिभाशाली टीम से शुरू होती है।",vi:"Hành trình Braly Đà Nẵng bắt đầu từ đội ngũ tài năng.",th:"การเดินทางของ Braly ดานังเริ่มต้นจากทีมงานที่มีความสามารถ",fil:"Nagsisimula ang paglalakbay ng Braly Da Nang sa aming mahuhusay na team.",id:"Perjalanan Braly Da Nang dimulai dari tim yang berbakat."},
+  about_values_h2:{en:"Core Values",fr:"Valeurs fondamentales",de:"Grundwerte",es:"Valores fundamentales",pt:"Valores essenciais",hi:"मूल मूल्य",vi:"Giá trị cốt lõi",th:"ค่านิยมหลัก",fil:"Pangunahing Mga Halaga",id:"Nilai-Nilai Inti"},
+  about_values_sub:{en:"The values that shape our culture and the way we work at Braly Da Nang.",fr:"Les valeurs qui façonnent notre culture et notre façon de travailler chez Braly Da Nang.",de:"Die Werte, die unsere Kultur und unsere Arbeitsweise bei Braly Da Nang prägen.",es:"Los valores que dan forma a nuestra cultura y a la manera en que trabajamos en Braly Da Nang.",pt:"Os valores que moldam nossa cultura e a forma como trabalhamos na Braly Da Nang.",hi:"वे मूल्य जो ब्राली दा नांग में हमारी संस्कृति और कार्यशैली को आकार देते हैं।",vi:"Những giá trị định hình văn hoá và cách làm việc tại Braly Đà Nẵng.",th:"ค่านิยมที่หล่อหลอมวัฒนธรรมและวิธีการทำงานที่ Braly ดานัง",fil:"Ang mga halagang humuhubog sa aming kultura at paraan ng pagtatrabaho sa Braly Da Nang.",id:"Nilai-nilai yang membentuk budaya dan cara kerja kami di Braly Da Nang."},
+  about_timeline_h2:{en:"Our Growth Journey",fr:"Notre parcours de croissance",de:"Unser Wachstumsweg",es:"Nuestro camino de crecimiento",pt:"Nossa jornada de crescimento",hi:"हमारी विकास यात्रा",vi:"Hành trình phát triển",th:"เส้นทางการเติบโต",fil:"Aming Paglalakbay sa Paglago",id:"Perjalanan Pertumbuhan Kami"},
+  about_timeline_sub:{en:"Key milestones in Braly Da Nang's development.",fr:"Les étapes clés du développement de Braly Da Nang.",de:"Wichtige Meilensteine in der Entwicklung von Braly Da Nang.",es:"Hitos clave en el desarrollo de Braly Da Nang.",pt:"Marcos importantes no desenvolvimento da Braly Da Nang.",hi:"ब्राली दा नांग के विकास में महत्वपूर्ण पड़ाव।",vi:"Những cột mốc quan trọng trong quá trình phát triển của Braly Đà Nẵng.",th:"เหตุการณ์สำคัญในเส้นทางการพัฒนาของ Braly ดานัง",fil:"Mahahalagang milestone sa pag-unlad ng Braly Da Nang.",id:"Tonggak penting dalam perkembangan Braly Da Nang."},
+  tl1_date:{en:"March 2025",fr:"mars 2025",de:"März 2025",es:"marzo de 2025",pt:"março de 2025",hi:"मार्च 2025",vi:"Tháng 3/2025",th:"มีนาคม 2025",fil:"Marso 2025",id:"Maret 2025"},
+  tl1_title:{en:"Beginning",fr:"Début",de:"Anfang",es:"Inicio",pt:"Início",hi:"आरंभ",vi:"Khởi đầu",th:"จุดเริ่มต้น",fil:"Simula",id:"Awal"},
+  tl1_desc:{en:"Braly Da Nang was born from the dedication of our leadership team, building a solid foundation rooted in people and company culture.",fr:"Braly Da Nang est né de l'engagement de notre équipe dirigeante, posant des bases solides fondées sur les personnes et la culture d'entreprise.",de:"Braly Da Nang entstand aus dem Engagement unseres Führungsteams und schuf ein solides Fundament, das auf Menschen und Unternehmenskultur basiert.",es:"Braly Da Nang nació de la dedicación de nuestro equipo directivo, construyendo una base sólida centrada en las personas y la cultura empresarial.",pt:"A Braly Da Nang nasceu da dedicação de nossa equipe de liderança, construindo uma base sólida centrada nas pessoas e na cultura da empresa.",hi:"ब्राली दा नांग हमारी नेतृत्व टीम के समर्पण से जन्मी, जिसने लोगों और कंपनी संस्कृति पर आधारित एक मजबूत नींव तैयार की।",vi:"Braly Đà Nẵng ra đời từ tâm huyết của đội ngũ lãnh đạo, xây dựng nền tảng vững chắc dựa trên con người và văn hoá doanh nghiệp",th:"Braly ดานังถือกำเนิดจากความทุ่มเทของทีมผู้นำ สร้างรากฐานที่มั่นคงบนพื้นฐานของผู้คนและวัฒนธรรมองค์กร",fil:"Isinilang ang Braly Da Nang mula sa dedikasyon ng aming leadership team, na bumubuo ng matatag na pundasyon batay sa tao at kultura ng kumpanya.",id:"Braly Da Nang lahir dari dedikasi tim kepemimpinan kami, membangun fondasi yang kokoh berlandaskan manusia dan budaya perusahaan."},
+  tl2_date:{en:"April 2025",fr:"avril 2025",de:"April 2025",es:"abril de 2025",pt:"abril de 2025",hi:"अप्रैल 2025",vi:"Tháng 4/2025",th:"เมษายน 2025",fil:"Abril 2025",id:"April 2025"},
+  tl2_title:{en:"First App Launched",fr:"Première application lancée",de:"Erste App veröffentlicht",es:"Primera aplicación lanzada",pt:"Primeiro aplicativo lançado",hi:"पहला ऐप लॉन्च हुआ",vi:"Ứng dụng đầu tiên ra mắt",th:"เปิดตัวแอปแรก",fil:"Unang App na Inilunsad",id:"Aplikasi Pertama Diluncurkan"},
+  tl2_desc:{en:"Quickly reached 500K+ downloads, marking a major milestone on our growth journey.",fr:"A rapidement atteint plus de 500 000 téléchargements, marquant une étape importante de notre croissance.",de:"Erreichte schnell über 500.000 Downloads und markierte einen wichtigen Meilenstein auf unserem Wachstumsweg.",es:"Alcanzó rápidamente más de 500 mil descargas, marcando un hito importante en nuestro crecimiento.",pt:"Alcançou rapidamente mais de 500 mil downloads, marcando um marco importante em nossa jornada de crescimento.",hi:"तेजी से 500K+ डाउनलोड तक पहुंचा, जो हमारी विकास यात्रा में एक महत्वपूर्ण पड़ाव है।",vi:"Nhanh chóng đạt 500k+ downloads, đánh dấu bước tiến quan trọng trên hành trình phát triển",th:"มียอดดาวน์โหลดกว่า 500,000 ครั้งอย่างรวดเร็ว นับเป็นก้าวสำคัญของการเติบโต",fil:"Mabilis na umabot sa 500K+ downloads, minarkahan ang mahalagang milestone sa aming paglago.",id:"Dengan cepat mencapai 500 ribu+ unduhan, menandai tonggak penting dalam perjalanan pertumbuhan kami."},
+  tl3_date:{en:"June 2025",fr:"juin 2025",de:"Juni 2025",es:"junio de 2025",pt:"junho de 2025",hi:"जून 2025",vi:"Tháng 6/2025",th:"มิถุนายน 2025",fil:"Hunyo 2025",id:"Juni 2025"},
+  tl3_title:{en:"A Turning Point",fr:"Un tournant",de:"Ein Wendepunkt",es:"Un punto de inflexión",pt:"Um ponto de virada",hi:"एक निर्णायक मोड़",vi:"Bước chuyển mình",th:"จุดเปลี่ยนสำคัญ",fil:"Isang Punto ng Pagbabago",id:"Titik Balik"},
+  tl3_desc:{en:"Opened our Da Nang office, ushering in a promising new era of growth with a team of 13 members.",fr:"Ouverture de notre bureau à Da Nang, marquant le début d'une nouvelle ère de croissance prometteuse avec une équipe de 13 membres.",de:"Eröffnung unseres Büros in Da Nang, was eine vielversprechende neue Wachstumsära mit einem 13-köpfigen Team einleitete.",es:"Abrimos nuestra oficina en Da Nang, dando inicio a una nueva era de crecimiento prometedora con un equipo de 13 personas.",pt:"Inauguramos nosso escritório em Da Nang, iniciando uma nova e promissora era de crescimento com uma equipe de 13 membros.",hi:"दा नांग में हमारा कार्यालय खोला गया, जिसने 13 सदस्यों की टीम के साथ विकास के एक आशाजनक नए युग की शुरुआत की।",vi:"Khai trương văn phòng tại Đà Nẵng, mở ra kỉ nguyên phát triển đầy triển vọng với đội ngũ 13 thành viên",th:"เปิดสำนักงานที่ดานัง เริ่มต้นยุคใหม่แห่งการเติบโตที่มีแนวโน้มดีด้วยทีมงาน 13 คน",fil:"Binuksan ang aming opisina sa Da Nang, na nagsisimula ng isang bagong panahon ng pag-asenso na may 13 miyembrong team.",id:"Membuka kantor kami di Da Nang, mengawali era pertumbuhan baru yang menjanjikan dengan tim beranggotakan 13 orang."},
+  tl4_date:{en:"December 2025",fr:"décembre 2025",de:"Dezember 2025",es:"diciembre de 2025",pt:"dezembro de 2025",hi:"दिसंबर 2025",vi:"Tháng 12/2025",th:"ธันวาคม 2025",fil:"Disyembre 2025",id:"Desember 2025"},
+  tl4_title:{en:"Breakthrough Growth",fr:"Croissance exceptionnelle",de:"Herausragendes Wachstum",es:"Crecimiento excepcional",pt:"Crescimento excepcional",hi:"उल्लेखनीय वृद्धि",vi:"Tăng trưởng vượt bậc",th:"การเติบโตแบบก้าวกระโดด",fil:"Malaking Paglago",id:"Pertumbuhan Pesat"},
+  tl4_desc:{en:"Team scaled up strongly to 29 members, shipping 40+ apps with 9M+ downloads and 300K+ DAU.",fr:"L'équipe s'est fortement agrandie à 29 membres, avec plus de 40 applications publiées, plus de 9 millions de téléchargements et plus de 300 000 DAU.",de:"Das Team wuchs stark auf 29 Mitglieder, mit über 40 veröffentlichten Apps, mehr als 9 Mio. Downloads und über 300.000 DAU.",es:"El equipo creció fuertemente a 29 miembros, lanzando más de 40 apps con más de 9 millones de descargas y más de 300 mil DAU.",pt:"A equipe cresceu fortemente para 29 membros, lançando mais de 40 apps com mais de 9 milhões de downloads e mais de 300 mil DAU.",hi:"टीम मजबूती से बढ़कर 29 सदस्यों तक पहुंची, 40+ ऐप्स लॉन्च किए, 9M+ डाउनलोड और 300K+ DAU हासिल किए।",vi:"Quy mô đội ngũ tăng trưởng mạnh mẽ lên 29 thành viên, phát hành 40+ apps, 9M+ downloads, 300k+ DAU",th:"ทีมงานเติบโตอย่างแข็งแกร่งเป็น 29 คน เปิดตัวแอปกว่า 40 แอป มียอดดาวน์โหลดกว่า 9 ล้านครั้ง และ DAU กว่า 300,000",fil:"Lumago nang malakas ang team sa 29 miyembro, naglunsad ng 40+ apps na may 9M+ downloads at 300K+ DAU.",id:"Tim tumbuh pesat menjadi 29 anggota, merilis 40+ aplikasi dengan 9 juta+ unduhan dan 300 ribu+ DAU."},
+  tl5_date:{en:"June 2026",fr:"juin 2026",de:"Juni 2026",es:"junio de 2026",pt:"junho de 2026",hi:"जून 2026",vi:"Tháng 6/2026",th:"มิถุนายน 2026",fil:"Hunyo 2026",id:"Juni 2026"},
+  tl5_title:{en:"Multi-Platform Expansion",fr:"Expansion multiplateforme",de:"Multiplattform-Expansion",es:"Expansión multiplataforma",pt:"Expansão multiplataforma",hi:"मल्टी-प्लेटफ़ॉर्म विस्तार",vi:"Triển khai đa nền tảng",th:"การขยายตัวข้ามแพลตฟอร์ม",fil:"Multi-Platform na Pagpapalawak",id:"Ekspansi Multi-Platform"},
+  tl5_sub:{en:"Breaking through on both Google Play & App Store",fr:"Une percée sur Google Play et l'App Store",de:"Durchbruch auf Google Play & App Store",es:"Un gran avance en Google Play y App Store",pt:"Um grande avanço na Google Play e na App Store",hi:"Google Play और App Store दोनों पर शानदार सफलता",vi:"Bứt phá trên cả Google Play & App Store",th:"ก้าวกระโดดครั้งใหญ่บนทั้ง Google Play และ App Store",fil:"Malaking tagumpay sa Google Play at App Store",id:"Terobosan di Google Play & App Store"},
+  tl5_li1:{en:"60+ apps live on both Google Play and the App Store",fr:"Plus de 60 applications disponibles sur Google Play et l'App Store",de:"Über 60 Apps auf Google Play und im App Store verfügbar",es:"Más de 60 apps disponibles en Google Play y App Store",pt:"Mais de 60 apps disponíveis na Google Play e na App Store",hi:"Google Play और App Store दोनों पर 60+ ऐप्स लाइव",vi:"60+ apps trên cả 2 nền tảng Google Play và App Store",th:"แอปกว่า 60 แอปพร้อมให้ใช้งานทั้งบน Google Play และ App Store",fil:"60+ apps na live sa Google Play at App Store",id:"60+ aplikasi tersedia di Google Play dan App Store"},
+  tl5_li2:{en:"30M+ downloads",fr:"Plus de 30 millions de téléchargements",de:"Über 30 Mio. Downloads",es:"Más de 30 millones de descargas",pt:"Mais de 30 milhões de downloads",hi:"30M+ डाउनलोड",vi:"30M+ lượt tải",th:"ยอดดาวน์โหลดกว่า 30 ล้านครั้ง",fil:"30M+ na downloads",id:"30 juta+ unduhan"},
+  tl5_li3:{en:"Multiple apps ranking in the TOP charts",fr:"Plusieurs applications classées dans le TOP",de:"Mehrere Apps in den TOP-Charts",es:"Varias apps entre las mejores clasificadas",pt:"Vários apps entre os mais bem classificados",hi:"कई ऐप्स टॉप चार्ट में शामिल",vi:"Nhiều ứng dụng nằm trong TOP",th:"หลายแอปติดอันดับ TOP",fil:"Maraming apps na nasa TOP charts",id:"Banyak aplikasi masuk peringkat TOP"}
+
 };
 
 const BRALY_FLAGS = {
@@ -640,6 +602,3 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 });
 </script>
-
-</body>
-</html>
